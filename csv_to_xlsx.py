@@ -16,7 +16,7 @@ def main():
 		df = pd.read_csv(csv_file, index_col=None, header=0, encoding='utf-8')
 		list_of_files.append(df)
 	
-	writer = pd.ExcelWriter('non_concussed_game_logs.xlsx')
+	writer = pd.ExcelWriter('ENTER_WORKBOOK_TITLE_HERE.xlsx')
 	for n, df in enumerate(list_of_files):
 		df.to_excel(writer, '%s' % names[n])
 	writer.save()
